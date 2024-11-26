@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>书籍详情</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 20px;
+    }
+    .book-cover {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .book-intro {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .comment-section {
+      margin-top: 20px;
+    }
+    .comment .actions {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    .comment .actions span {
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .recommendation {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .recommended-book {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .recommended-book img {
+      width: 50px;
+      height: 70px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    .modal-content {
+        border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">陈光宇毕业设计 | 图书管理系统</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search books" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">查</button>
+            </form>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="btn btn-primary" href="#">登录</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="btn btn-secondary" href="#">注册</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- 图书详情 -->
+    <div class="container">
+        <!-- 图书详情 -->
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://via.placeholder.com/300x400" alt="书籍封面" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8">
+            <h2>书籍标题</h2>
+            <p><strong>作者：</strong>作者名称</p>
+            <p><strong>国际编码：</strong>978-1234567890</p>
+            <p><strong>页数：</strong>350 页</p>
+            <p><strong>书籍简介：</strong>这是一本关于技术发展的经典书籍，内容涵盖人工智能、区块链等前沿领域。</p>
+            <div class="mt-4">
+              <button class="btn btn-success me-2">下载书籍</button>
+              <!-- 触发弹窗按钮 -->
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookLocationModal">查看图书馆位置</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- 弹窗 -->
+        <div class="modal fade" id="bookLocationModal" tabindex="-1" aria-labelledby="bookLocationModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="bookLocationModalLabel">书籍位置</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+              </div>
+              <div class="modal-body">
+                <p><strong>楼层：</strong>3层</p>
+                <p><strong>分区：</strong>技术书籍区</p>
+                <p><strong>排号：</strong>第5排</p>
+                <p><strong>剩余数量：</strong>2本</p>
+                <p><em>请前往图书馆3层技术书籍区的第5排找到此书。</em></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 图书介绍 -->
+    <div class="book-intro mt-4">
+      <h4>关于这本书</h4>
+      <p>
+        本书通过真实案例和详细的理论分析，解读了当前技术发展的脉络与趋势。适合初学者入门，也可为从业者提供全面参考。
+        本书通过真实案例和详细的理论分析，解读了当前技术发展的脉络与趋势。适合初学者入门，也可为从业者提供全面参考。
+        本书通过真实案例和详细的理论分析，解读了当前技术发展的脉络与趋势。适合初学者入门，也可为从业者提供全面参考。
+        本书通过真实案例和详细的理论分析，解读了当前技术发展的脉络与趋势。适合初学者入门，也可为从业者提供全面参考。
+        本书通过真实案例和详细的理论分析，解读了当前技术发展的脉络与趋势。适合初学者入门，也可为从业者提供全面参考。
+        本书通过真实案例和详细的理论分析，解读了当前技术发展的脉络与趋势。适合初学者入门，也可为从业者提供全面参考。
+        
+      </p>
+    </div>
+
+    <div class="row">
+      <!-- 评论区 -->
+      <div class="col-md-8">
+        <div class="comment-section">
+          <h3>评论区</h3>
+          <div class="comment">
+            <strong>用户1</strong> <small class="text-muted">2024年11月22日</small>
+            <p>这本书的内容非常详细，让我对人工智能有了更深入的了解。</p>
+            <div class="actions">
+              <span class="text-primary">👍 点赞 (10)</span>
+              <span class="text-primary">💬 回复</span>
+            </div>
+          </div>
+          <div class="comment">
+            <strong>用户2</strong> <small class="text-muted">2024年11月21日</small>
+            <p>书中的案例非常实用，建议大家一读。</p>
+            <div class="actions">
+              <span class="text-primary">👍 点赞 (5)</span>
+              <span class="text-primary">💬 回复</span>
+            </div>
+          </div>
+
+          <!-- 添加新评论 -->
+          <h5 class="mt-4">添加评论</h5>
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">用户名</label>
+              <input type="text" class="form-control" id="username" placeholder="请输入您的用户名">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">邮箱</label>
+              <input type="email" class="form-control" id="email" placeholder="请输入您的邮箱">
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">评论内容</label>
+              <textarea class="form-control" id="comment" rows="3" placeholder="写下您的评论"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">提交评论</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- 推荐书籍 -->
+      <div class="col-md-4">
+        <div class="recommendation">
+          <h4>推荐书籍</h4>
+          <div class="recommended-book">
+            <img src="https://via.placeholder.com/50x70" alt="推荐书籍">
+            <div>
+              <p class="mb-0">推荐书籍1</p>
+              <small class="text-muted">作者：XXX</small>
+            </div>
+          </div>
+          <div class="recommended-book">
+            <img src="https://via.placeholder.com/50x70" alt="推荐书籍">
+            <div>
+              <p class="mb-0">推荐书籍2</p>
+              <small class="text-muted">作者：XXX</small>
+            </div>
+          </div>
+          <div class="recommended-book">
+            <img src="https://via.placeholder.com/50x70" alt="推荐书籍">
+            <div>
+              <p class="mb-0">推荐书籍3</p>
+              <small class="text-muted">作者：XXX</small>
+            </div>
+          </div>
+          <div class="recommended-book">
+            <img src="https://via.placeholder.com/50x70" alt="推荐书籍">
+            <div>
+              <p class="mb-0">推荐书籍1</p>
+              <small class="text-muted">作者：XXX</small>
+            </div>
+        </div>
+        <div class="recommended-book">
+            <img src="https://via.placeholder.com/50x70" alt="推荐书籍">
+            <div>
+              <p class="mb-0">推荐书籍1</p>
+              <small class="text-muted">作者：XXX</small>
+            </div>
+      </div>
+      <div class="recommended-book">
+        <img src="https://via.placeholder.com/50x70" alt="推荐书籍">
+        <div>
+          <p class="mb-0">推荐书籍1</p>
+          <small class="text-muted">作者：XXX</small>
+        </div>
+    </div>
+    <div class="recommended-book">
+        <img src="https://via.placeholder.com/50x70" alt="推荐书籍">
+        <div>
+          <p class="mb-0">推荐书籍1</p>
+          <small class="text-muted">作者：XXX</small>
+        </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+ <!-- Footer -->
+ <footer class="bg-light text-center text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <!-- About Us -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">About Us</h5>
+          <p>
+            我们致力于提供全面的在线图书馆体验，拥有大量的书籍收藏。在此之前，完成毕业设计进行制作，版权归属为陈光宇！
+          </p>
+        </div>
+        <!-- Useful Links -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-dark">版权纠纷</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">如何使用</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">合作授权</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3 bg-dark text-white">
+      © 2024陈光宇毕业设计 | 图书管理系统. All rights reserved.
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 示例：从后端加载书籍位置
+    document.getElementById('bookLocationModal').addEventListener('show.bs.modal', function () {
+      // 假设后端接口为 /api/book-location，返回 JSON 数据
+      fetch('/api/book-location?bookId=123')
+        .then(response => response.json())
+        .then(data => {
+          // 根据返回的 JSON 数据填充弹窗内容
+          document.querySelector('#bookLocationModal .modal-body').innerHTML = `
+            <p><strong>楼层：</strong>${data.floor}层</p>
+            <p><strong>分区：</strong>${data.section}</p>
+            <p><strong>排号：</strong>${data.row}排</p>
+            <p><strong>剩余数量：</strong>${data.available}本</p>
+            <p><em>${data.instructions}</em></p>
+          `;
+        })
+        .catch(error => {
+          console.error('获取书籍位置失败：', error);
+          document.querySelector('#bookLocationModal .modal-body').innerHTML = `
+            <p>1</p>
+          `;
+        });
+    });
+  </script>
+</body>
+
+</html>
