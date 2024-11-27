@@ -2,10 +2,10 @@
 session_start(); // 启动会话，保存用户信息
 
 // 数据库配置
-$servername = "23.91.96.62"; // 数据库 IP
-$username = "bysj";
-$password = "BEhLA7ZyEDbNTzrP";
-$dbname = "bysj";
+$servername = "123"; // 数据库 IP
+$username = "123";
+$password = "123";
+$dbname = "123";
 
 // 创建连接
 $conn = new mysqli($servername, $username, $password, $dbname);
